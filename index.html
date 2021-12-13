@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" />
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <h1>Sendbird active users</h1>
+
+  <div id="login-wrapper">
+    <form class="pure-form pure-form-stacked">
+      <input type="text" name="app_id" id="app_id" placeholder="Sendbird App ID">
+      <input type="text" name="user_id" id="user_id" placeholder="User ID">
+      <button type="button" id="login-button" class="pure-button pure-button-primary" disabled>Login</button>
+    </form>
+  </div>
+
+  <div id="call-options">
+    <form class="pure-form pure-form-stacked">
+      <input type="text" id="user-to-call" placeholder="User ID to call">
+      <button type="button" id="call-user" class="pure-button pure-button-primary">Call</button>
+    </form>
+  </div>
+
+  <div id="call-view">
+    <div id="call-user-id"></div>
+    <button type="button" id="end-call" class="pure-button pure-button-primary">End call</button>
+    <audio id="remote_audio" autoplay></audio>
+  </div>
+
+  <script src="./node_modules/sendbird/SendBird.min.js"></script>
+  <script src="./node_modules/sendbird-calls/SendBirdCall.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
